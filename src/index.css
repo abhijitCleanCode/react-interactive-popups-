@@ -1,68 +1,45 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.card-neumorphism {
+        border-radius: 11px;
+        background: linear-gradient(145deg, #313a5b, #273050, #1e2746, #151e3b, #0b1531);
+        box-shadow: 23px 23px 45px #000000,
+                -23px -23px 45px #0B1531;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.blue-text-gradient {
+        /* background: -webkit-linear-gradient(#eee, #333); */
+        background: #56ccf2;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top,
+                        #2f80ed,
+                        #56ccf2);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top,
+                        #2f80ed,
+                        #56ccf2);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.map-responsive {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+
+        height: 0;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.map-responsive iframe {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        border: 0;
+
+        height: 100%;
+        width: 100%;
 }
